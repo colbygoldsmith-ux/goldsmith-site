@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colby Goldsmith — Aspiring Injury & Malpractice Attorney · USF School of Law</title>
+<meta name="description" content="Colby Goldsmith — incoming J.D. candidate at the University of San Francisco School of Law, headed toward personal injury and medical malpractice law. Based in San Francisco.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F3EDE2;
+    --bone-2:#E8E0D0;
+    --ink:#1B160F;
+    --deep:#2E2A22;
+    --muted:#615949;
+    --red:#BE1E2D;
+    --red-deep:#9C1722;
+    --hair:#DCD4C3;
+    --hair-dark:rgba(243,237,226,.16);
+
+    --display:"Archivo", system-ui, sans-serif;
+    --body:"Newsreader", Georgia, serif;
+    --measure:72rem;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--body);font-size:clamp(1.05rem,1rem + .3vw,1.18rem);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(1.4rem,5vw,3.5rem);}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--display);font-size:.76rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin:0 0 1.3rem;}
+  .eyebrow::before{content:"";width:1.6rem;height:2px;background:var(--red);}
+
+  /* ---------- masthead ---------- */
+  .masthead{position:sticky;top:0;z-index:60;background:rgba(243,237,226,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair);}
+  .masthead-inner{max-width:var(--measure);margin:0 auto;padding:.85rem clamp(1.4rem,5vw,3.5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+  .brand{font-family:var(--display);font-weight:800;font-size:1.02rem;letter-spacing:.01em;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:.6rem;}
+  .brand .mark{width:9px;height:9px;background:var(--red);transform:rotate(45deg);}
+  .nav{display:flex;gap:1.8rem;}
+  .nav a{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-weight:600;font-size:.74rem;color:var(--muted);text-decoration:none;transition:color .2s ease;}
+  .nav a:hover,.nav a.active{color:var(--red);}
+  @media (max-width:780px){ .nav{display:none;} }
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;text-decoration:none;padding:.85rem 1.6rem;transition:transform .12s ease,background .2s ease,color .2s ease,border-color .2s ease;}
+  .btn-primary{background:var(--red);color:var(--bone);}
+  .btn-primary:hover{background:var(--red-deep);}
+  .btn-ghost{border:2px solid var(--ink);color:var(--ink);padding:calc(.85rem - 2px) calc(1.6rem - 2px);}
+  .btn-ghost:hover{background:var(--ink);color:var(--bone);}
+  .btn:active{transform:translateY(1px);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(3.5rem,8vw,6.5rem) 0 clamp(2.6rem,5vw,4rem);}
+  .statement{font-family:var(--display);font-weight:900;font-size:clamp(2.9rem,1.4rem + 8vw,7.4rem);line-height:.94;letter-spacing:-.025em;color:var(--ink);margin:0;max-width:17ch;}
+  .statement .line{display:block;}
+  .statement em{font-style:normal;color:var(--red);}
+  .sub{font-family:var(--body);font-size:clamp(1.18rem,1.05rem + .55vw,1.5rem);line-height:1.5;color:var(--muted);max-width:54ch;margin:2rem 0 0;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.3rem;}
+
+  .anim .line,.anim .reveal-h{transform:translateY(24px);opacity:0;}
+  .anim.go .line{animation:rise .85s cubic-bezier(.16,1,.3,1) forwards;}
+  .anim.go .reveal-h{animation:rise .8s cubic-bezier(.16,1,.3,1) forwards;}
+  @keyframes rise{to{transform:translateY(0);opacity:1;}}
+
+  /* ---------- at a glance (warm panel) ---------- */
+  .board{background:var(--bone-2);padding:clamp(2.8rem,6vw,4.5rem) 0;}
+  .board .head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.4rem 1.5rem;border-bottom:2px solid var(--red);padding-bottom:1rem;margin-bottom:.4rem;}
+  .board .title{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);line-height:1;letter-spacing:-.01em;color:var(--ink);margin:0;}
+  .board .kick{font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);}
+  .board-row{display:grid;grid-template-columns:13rem 1fr;gap:1.5rem;padding:1.05rem 0;border-bottom:1px solid var(--hair);align-items:baseline;}
+  .board-row:last-child{border-bottom:0;}
+  .board-row .lbl{font-family:var(--display);font-weight:700;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red);}
+  .board-row .val{font-family:var(--body);font-size:1.3rem;color:var(--ink);line-height:1.25;}
+  @media (max-width:600px){
+    .board-row{grid-template-columns:1fr;gap:.2rem;padding:.9rem 0;}
+    .board-row .val{font-size:1.18rem;}
+  }
+
+  /* ---------- generic band ---------- */
+  .band{padding:clamp(3.2rem,7vw,5.5rem) 0;border-top:1px solid var(--hair);}
+  .band h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,1.3rem + 3vw,4rem);line-height:.98;letter-spacing:-.02em;margin:0 0 1.5rem;color:var(--ink);}
+  .band h2 em{font-style:normal;color:var(--red);}
+
+  /* about */
+  .about-lead{font-family:var(--body);font-size:clamp(1.7rem,1.2rem + 1.8vw,2.7rem);font-weight:500;line-height:1.22;max-width:24ch;margin:0 0 2.4rem;color:var(--ink);}
+  .about-lead em{font-style:italic;color:var(--red);}
+  .about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:start;}
+  .about-body p{font-family:var(--body);font-size:1.2rem;line-height:1.72;margin:0 0 1.2rem;max-width:58ch;}
+  .about-body p:last-child{margin-bottom:0;}
+  .pullquote{font-family:var(--body);font-style:italic;font-size:1.7rem;line-height:1.32;color:var(--ink);border-left:3px solid var(--red);padding-left:1.5rem;}
+  .pullquote span{display:block;font-style:normal;font-family:var(--display);font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-top:1.1rem;}
+  @media (max-width:780px){ .about-grid{grid-template-columns:1fr;} }
+
+  /* experience */
+  .exp-intro{font-family:var(--body);font-size:1.22rem;line-height:1.7;color:var(--ink);max-width:62ch;margin:0;}
+  .exp-intro b{font-weight:600;}
+  .lab{font-family:var(--display);font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 1.1rem;}
+  .track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:.3rem 0 0;}
+  .phase{position:relative;padding:1.8rem 1.2rem 0 0;}
+  .phase::before{content:"";position:absolute;top:5px;left:0;width:12px;height:12px;background:var(--red);transform:rotate(45deg);z-index:2;}
+  .phase::after{content:"";position:absolute;top:10px;left:14px;right:0;height:2px;background:var(--hair);}
+  .phase:last-child::after{display:none;}
+  .phase .pnum{font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--red);}
+  .phase .plabel{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:.01em;margin-top:.35rem;color:var(--ink);}
+  @media (max-width:680px){
+    .track{grid-template-columns:1fr;}
+    .phase{padding:0 0 1.5rem 1.6rem;}
+    .phase::before{top:4px;left:0;}
+    .phase::after{top:16px;left:5px;right:auto;width:2px;height:calc(100% - 6px);}
+  }
+  .areas{margin-top:clamp(2rem,4vw,2.8rem);}
+  .areas ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem;}
+  .areas li{font-family:var(--display);font-weight:600;font-size:.84rem;letter-spacing:.02em;color:var(--ink);border:2px solid var(--ink);padding:.4rem 1.05rem;}
+  .areas li.key{background:var(--red);border-color:var(--red);color:var(--bone);}
+
+  /* focus */
+  .focus-intro{font-family:var(--body);font-size:1.25rem;line-height:1.6;color:var(--muted);max-width:54ch;margin:0 0 clamp(1.8rem,4vw,2.6rem);}
+  .focus-cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,3vw,1.8rem);}
+  .card{padding:2.2rem 2.1rem;transition:transform .2s ease;}
+  .card:hover{transform:translateY(-4px);}
+  .card .num{font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--red);}
+  .card h3{font-family:var(--display);font-weight:800;font-size:1.7rem;letter-spacing:-.01em;margin:.4rem 0 .8rem;line-height:1.02;color:var(--ink);}
+  .card p{font-family:var(--body);font-size:1.1rem;line-height:1.6;margin:0 0 1.4rem;color:var(--muted);}
+  .card ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem;}
+  .card li{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.03em;padding:.32rem .85rem;border:2px solid var(--ink);color:var(--ink);}
+  .card.fill{background:var(--bone-2);}
+  .card.lite{background:transparent;border:2px solid var(--ink);}
+  @media (max-width:680px){ .focus-cards{grid-template-columns:1fr;} }
+
+  /* writing */
+  .writing-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;}
+  .writing-head p{color:var(--muted);margin:.5rem 0 0;max-width:40ch;}
+  .posts{margin-top:2rem;}
+  .post{display:grid;grid-template-columns:8.5rem 1fr;gap:clamp(1rem,3vw,2.5rem);padding:2rem 0;border-top:1px solid var(--hair);align-items:baseline;transition:padding-left .2s ease;}
+  .post:last-child{border-bottom:1px solid var(--hair);}
+  .post:hover{padding-left:.4rem;}
+  .post .date{font-family:var(--display);font-size:.78rem;font-weight:700;color:var(--red);letter-spacing:.1em;text-transform:uppercase;}
+  .post h3{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,1.1rem + .9vw,1.9rem);letter-spacing:-.01em;margin:0 0 .5rem;line-height:1.05;color:var(--ink);}
+  .post p{font-family:var(--body);font-size:1.1rem;line-height:1.6;color:var(--muted);margin:0 0 .9rem;max-width:58ch;}
+  .post a.read{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:3px solid var(--red);padding-bottom:.15rem;}
+  .post a.read:hover{color:var(--red);}
+  .post.soon h3{color:var(--muted);}
+  @media (max-width:620px){ .post{grid-template-columns:1fr;gap:.4rem;} }
+
+  /* connect (warm panel) */
+  .connect{background:var(--bone-2);padding:clamp(3.2rem,7vw,5.5rem) 0;border-top:2px solid var(--red);}
+  .connect h2{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,1.4rem + 3.4vw,4.2rem);line-height:.98;letter-spacing:-.02em;margin:0 0 1.2rem;color:var(--ink);}
+  .connect h2 em{font-style:normal;color:var(--red);}
+  .connect .intro{font-family:var(--body);font-size:1.25rem;line-height:1.6;color:var(--muted);max-width:48ch;margin:0 0 2rem;}
+  .seeking{border:1px solid var(--hair);border-left:3px solid var(--red);padding:1.5rem 1.7rem;max-width:58ch;margin:0 0 2.2rem;background:var(--bone);}
+  .seeking .lab{color:var(--red);margin:0 0 .6rem;}
+  .seeking p:last-child{font-family:var(--body);font-size:1.3rem;font-weight:400;line-height:1.45;color:var(--ink);margin:0;}
+  .connect-links{display:flex;flex-wrap:wrap;gap:.9rem;}
+  .connect-links a{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;text-decoration:none;padding:.85rem 1.6rem;transition:background .2s,color .2s,border-color .2s,transform .12s;}
+  .connect-links a:active{transform:translateY(1px);}
+  .connect-links .solid{background:var(--red);color:var(--bone);}
+  .connect-links .solid:hover{background:var(--red-deep);}
+  .connect-links .outline{border:2px solid var(--ink);color:var(--ink);padding:calc(.85rem - 2px) calc(1.6rem - 2px);}
+  .connect-links .outline:hover{background:var(--ink);color:var(--bone);}
+
+  /* footer (soft warm dark) */
+  footer{background:var(--deep);color:rgba(243,237,226,.62);padding:1.9rem 0;}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-family:var(--display);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;}
+  .foot strong{color:var(--bone);font-weight:700;}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  :focus-visible{outline:3px solid var(--red);outline-offset:3px;}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal,.anim .line,.anim .reveal-h{opacity:1;transform:none;transition:none;animation:none;}
+    .card:hover,.post:hover{transform:none;padding-left:0;}
+  }
+</style>
+</head>
+<body id="top">
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>Colby Goldsmith</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#focus">Focus</a>
+      <a href="#writing">Writing</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap anim" id="heroAnim">
+      <p class="eyebrow reveal-h" style="animation-delay:.05s">Aspiring injury &amp; malpractice attorney</p>
+      <h1 class="statement">
+        <span class="line" style="animation-delay:.12s">Learning to <em>fight</em> for</span>
+        <span class="line" style="animation-delay:.20s">the people insurers</span>
+        <span class="line" style="animation-delay:.28s">count on giving up.</span>
+      </h1>
+      <p class="sub reveal-h" style="animation-delay:.42s">An incoming law student at the University of San Francisco, set on personal injury and medical malpractice law. My focus is people harmed by negligence at work, on the road, or in the care they trusted. Two years inside a litigation practice pointed me here.</p>
+      <div class="cta-row reveal-h" style="animation-delay:.52s">
+        <a class="btn btn-primary" href="#connect">Get in touch</a>
+        <a class="btn btn-ghost" href="#experience">See my experience</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AT A GLANCE -->
+  <section class="board" id="glance">
+    <div class="wrap">
+      <div class="head reveal">
+        <h2 class="title">At a Glance</h2>
+        <span class="kick">The short version</span>
+      </div>
+      <div class="board-row reveal"><div class="lbl">Hometown</div><div class="val">Long Island, New York</div></div>
+      <div class="board-row reveal"><div class="lbl">Focus</div><div class="val">Personal injury &amp; medical malpractice</div></div>
+      <div class="board-row reveal"><div class="lbl">Experience</div><div class="val">Two years inside a litigation practice</div></div>
+      <div class="board-row reveal"><div class="lbl">College</div><div class="val">UC San Diego, finished in three years</div></div>
+      <div class="board-row reveal"><div class="lbl">Law school</div><div class="val">University of San Francisco, Class of 2029</div></div>
+      <div class="board-row reveal"><div class="lbl">Based in</div><div class="val">San Francisco, California</div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="band">
+    <div class="wrap">
+      <p class="eyebrow reveal">About</p>
+      <p class="about-lead reveal">I came up around finance. Then I chose the side that <em>demands accountability</em>.</p>
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p>I grew up just outside New York City, where success was measured in Wall Street terms, and I spent college at UC San Diego pointed straight at a career in finance. I was competitive enough to finish my degree in three years, and finance felt like the ultimate proving ground.</p>
+          <p>The closer I got, the less I liked what I saw: a culture that too often put profit ahead of people. By my senior year I knew I wanted the opposite: work grounded in integrity, where the job is to hold power accountable. I decided to become a lawyer, and I didn&rsquo;t wait around to start.</p>
+          <p>Personal injury and medical malpractice are where I want to focus, and that&rsquo;s personal. My brother is a physician in physical medicine and rehabilitation, the field that puts people back together after serious injury. His stories, and the negligence behind so many of them, from employers cutting corners to insurers and drivers who were never held to account, showed me exactly where I could do the most good.</p>
+          <p>Today I&rsquo;m in San Francisco, where I moved with my partner, an OB nurse at UCSF. This August I begin law school at the University of San Francisco, with two years of hands-on exposure behind me and a clear sense of what I want to get good at.</p>
+        </div>
+        <aside class="pullquote reveal">
+          My brother helps people recover. I want to make sure someone answers for the harm.
+          <span>The throughline</span>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="band">
+    <div class="wrap">
+      <p class="eyebrow reveal">Experience</p>
+      <h2 class="reveal">The foundation. <em>Now to build on it.</em></h2>
+      <p class="exp-intro reveal">The day I changed direction, I started cold-calling firms and leaning on the network I&rsquo;d built running my own business. That persistence led me to litigation attorney <b>David Kaufman</b>, who gave me my first real foothold in the law. Those two years gave me what mattered most at this stage: a clear direction, and a close-up look at the craft I now want to spend law school learning to do well.</p>
+
+      <p class="lab reveal" style="margin-top:clamp(2.4rem,5vw,3.4rem);">Over those two years, I got my hands on</p>
+      <div class="track reveal" aria-label="Work I got hands-on with">
+        <div class="phase"><div class="pnum">01</div><div class="plabel">Legal research</div></div>
+        <div class="phase"><div class="pnum">02</div><div class="plabel">Drafting motions</div></div>
+        <div class="phase"><div class="pnum">03</div><div class="plabel">Managing discovery</div></div>
+        <div class="phase"><div class="pnum">04</div><div class="plabel">Time in court</div></div>
+      </div>
+
+      <div class="areas reveal">
+        <p class="lab">Practice areas I got exposure to</p>
+        <ul>
+          <li class="key">Personal injury</li>
+          <li class="key">Medical malpractice</li>
+          <li>Employment law</li>
+          <li>Government torts</li>
+          <li>Tenant defense</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section id="focus" class="band">
+    <div class="wrap">
+      <p class="eyebrow reveal">Focus</p>
+      <h2 class="reveal">Two skills worth <em>three years.</em></h2>
+      <p class="focus-intro reveal">A career in personal injury and medical malpractice needs two things in equal measure: the will to fight a case, and the judgment to resolve it.</p>
+      <div class="focus-cards">
+        <div class="card fill reveal">
+          <div class="num">01</div>
+          <h3>Practical litigation</h3>
+          <p>Sharpening the courtroom skills I&rsquo;ve already started building: the work clients hire a lawyer to do, learned by doing it.</p>
+          <ul>
+            <li>Oral advocacy</li><li>Motion practice</li><li>Evidence</li><li>Depositions</li><li>Trial advocacy</li>
+          </ul>
+        </div>
+        <div class="card lite reveal">
+          <div class="num">02</div>
+          <h3>Dispute resolution</h3>
+          <p>The quieter craft of ending conflict efficiently and fairly, and getting an injured client a fair result without a trial when that&rsquo;s the smarter path.</p>
+          <ul>
+            <li>Negotiation</li><li>Mediation</li><li>Arbitration</li><li>Settlement</li><li>Client counseling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing" class="band">
+    <div class="wrap">
+      <div class="writing-head">
+        <div class="reveal">
+          <p class="eyebrow">Writing</p>
+          <h2>Notes from the <em>journey.</em></h2>
+        </div>
+        <p class="reveal">Short, honest entries as I move through law school, newest first.</p>
+      </div>
+
+      <div class="posts">
+        <!-- To add a post, copy one <article class="post"> block and update the date, title, and text. -->
+        <article class="post reveal">
+          <div class="date">Jun 2026</div>
+          <div>
+            <h3>Why I traded finance for law.</h3>
+            <p>The short version of how a competitive kid headed for Wall Street ended up cold-calling law firms instead, and why I&rsquo;ve never second-guessed it.</p>
+            <a class="read" href="#">Read more &rarr;</a>
+          </div>
+        </article>
+
+        <article class="post soon reveal">
+          <div class="date">Aug 2026</div>
+          <div>
+            <h3>First week of 1L, coming soon.</h3>
+            <p>The next entry arrives once classes start. Check back for the first dispatch from inside law school.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" class="connect">
+    <div class="wrap">
+      <p class="eyebrow reveal">Connect</p>
+      <h2 class="reveal">Let&rsquo;s stay <em>in touch.</em></h2>
+      <p class="intro reveal">If we&rsquo;ve met recently, or you&rsquo;d simply like to, I&rsquo;d welcome the message. Always glad to meet people working in and around the law.</p>
+      <div class="seeking reveal">
+        <p class="lab">What I&rsquo;m looking for</p>
+        <p>More than anything, I want to find a mentor in personal injury or medical malpractice: an attorney open to taking on someone who&rsquo;s hungry, eager to learn, and ready to put in the work. If that&rsquo;s you, I&rsquo;d love to connect.</p>
+      </div>
+      <div class="connect-links reveal">
+        <a class="solid" href="mailto:colby@goldsmithlaw.com">Email me</a>
+        <a class="outline" href="https://www.linkedin.com/in/colby-goldsmith/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>Colby Goldsmith</strong> &middot; San Francisco, CA</div>
+    <div>goldsmithlaw.com &middot; &copy; <span id="yr"></span></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const hero=document.getElementById('heroAnim');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ hero.classList.remove('anim'); }
+  else { requestAnimationFrame(()=>requestAnimationFrame(()=>hero.classList.add('go'))); }
+
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const links=[...document.querySelectorAll('.nav a')];
+  const map=new Map(links.map(l=>[l.getAttribute('href').slice(1),l]));
+  const no=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=map.get(e.target.id);if(a)a.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
+  ['about','experience','focus','writing','connect'].forEach(id=>{const s=document.getElementById(id);if(s)no.observe(s);});
+</script>
+</body>
+</html>
